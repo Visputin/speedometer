@@ -1,6 +1,8 @@
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
+#include "fonts/FreeSans12pt7b.h"
+#include "fonts/ShareTech_Regular10pt7b.h"
 
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
@@ -25,14 +27,14 @@ void setup() {
   Serial.begin(115200);
 
   if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
-    Serial.println(F("SSD1306 allocation failed"));
+    Serial.println(F("SSD1309 allocation failed"));
     for(;;);
   }
 
   display.clearDisplay();
 
-  display.setTextSize(2);
-  display.setFont();  
+  //display.setTextSize(1);
+  display.setFont(&ShareTech_Regular10pt7b);  
   display.setTextColor(WHITE);
 
   centerPrint(display, "Welcome!");
