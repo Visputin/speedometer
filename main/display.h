@@ -1,0 +1,14 @@
+#pragma once
+
+#include <Arduino.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+
+extern Adafruit_SSD1306 display;
+
+void initDisplay();
+void centerPrint(Adafruit_GFX &gfx, const char *text);
+void centerPrint(Adafruit_GFX &gfx, int value);
