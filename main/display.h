@@ -10,5 +10,6 @@
 extern Adafruit_SSD1306 display;
 
 void initDisplay();
-void centerPrint(Adafruit_GFX &gfx, const char *text);
-void centerPrint(Adafruit_GFX &gfx, int value);
+void printMessage(const char* msg);
+void showSplashScreen();
+void centerSinglePrint(const char *text);
